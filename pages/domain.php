@@ -133,11 +133,11 @@ if ($domainInfo == -1 or $domainInfo == 0) {
                     </div>
                     <div id="graph-bottom-div">
                         <?php
-                        $dayCount = 0;
+                        $dayCount = count($res) - 1;
                         foreach ($res as $row) {
                             $date = date("m-d", strtotime("-$dayCount days"));
                             echo "<div class='graph-bottom-labelItem'>$date</div>";
-                            $dayCount = $dayCount + 1;
+                            $dayCount = $dayCount - 1;
                         }
                         ?>
                     </div>
