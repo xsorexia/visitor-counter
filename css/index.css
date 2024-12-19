@@ -1,0 +1,98 @@
+@import url('/css/global.css');
+
+body {
+    background-color: white;
+}
+
+#navbar-div {
+    position: absolute;
+    display: flex;
+    top: 15px;
+    right: 15px;
+    box-sizing: border-box;
+    padding: 20px 40px;
+    gap: 30px;
+    border-radius: 100px;
+    background: linear-gradient(70deg, #47495e, #5f5e5e);
+    color: white;
+
+    div {
+        transition: 0.3s;
+    }
+    div:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        font-weight: 700;
+    }
+}
+#index-body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+
+    #index-body-left {
+        width: calc(50% - 2 * 15px);
+        margin-left: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: calc(100% - 2 * 15px);
+        margin-top: 15px;
+        border-radius: 20px;
+        background: linear-gradient(70deg, #47495e, #5f5e5e);
+        #index-body-div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            img {
+                filter: invert(1);
+                width: 70px;
+            }
+
+            #index-body-left-title {
+                color: white;
+                font-size: 35px;
+                font-weight: 500;
+            }
+        }
+
+    }
+
+    #index-body-right {
+        box-sizing: border-box;
+        display: flex;
+        height: 100%;
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px 100px;
+        #index-body-right-title {
+            font-weight: 700;
+            font-size: 30px;
+        }
+
+        #index-body-right-desc {
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        #index-body-button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            width: 150px;
+            margin-top: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #index-body-button:hover {
+            opacity: 0.8;
+        }
+    }
+}

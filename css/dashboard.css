@@ -1,0 +1,173 @@
+@import url('/css/global.css');
+@import url('/css/graph.css');
+
+
+
+#dashboard-grid {
+    margin-top: 50px;
+    max-width: 1000px;
+    width: calc(100% - 2 * 70px);
+    margin: 50px auto;
+
+
+    #dashboard-grid-top {
+        width: 100%;
+        border-radius: 10px;
+        background: linear-gradient(70deg, #47495e, #5f5e5e);
+        padding: 20px 30px;
+        color: white;
+        box-sizing: border-box;
+        #dashboard-grid-top-title {
+            font-size: 17px;
+            font-weight: 600;
+        }
+        #dashboard-grid-top-desc {
+            font-size: 13px;
+            font-weight: 300;
+        }
+        transition: 0.3s;
+    }
+    #dashboard-grid-top:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+
+    #dashboard-grid-info {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 10px;
+
+        #dashboard-grid-info-left, #dashboard-grid-info-right {
+            width: 100%;
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px 30px;
+            box-sizing: border-box;
+        }
+
+        #dashboard-grid-info-left {
+            #dashboard-grid-info-left-title {
+                font-weight: 500;
+                font-size: 25px;
+
+
+            }
+            #dashboard-grid-info-left-bottom {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                margin-top: 15px;
+                padding: 0px 15px;
+                box-sizing: border-box;
+
+                .dashboard-grid-info-left-item {
+                    width: 100%;
+                    
+
+                    .dashboard-grid-info-left-number {
+                        font-size: 45px;
+                        font-weight: 400;
+                    }
+
+                    .dashboard-grid-info-left-desc {
+                        font-size: 13px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+
+        #dashboard-grid-info-right {
+            width: 100%;
+            min-height: 230px;
+            height: auto;
+            padding-top: 15px;
+
+
+        }
+    }
+
+    #dashboard-grid-bottom {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 10px;
+
+        #dashboard-grid-bottom-left, #dashboard-grid-bottom-right {
+            width: 50%;
+            border-radius: 10px;
+            padding: 30px 30px;
+            box-sizing: border-box;
+        }
+
+        #dashboard-grid-bottom-left {
+            padding: 0;
+            #dashboard-grid-bottom-left-ad1 {
+                width: 100%;
+                box-sizing: border-box;
+                border-radius: 10px;
+                background-color: black;
+                color: white;
+                padding: 30px 30px;
+
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                align-items: center;
+                img {
+                    width: 30px;
+                    filter: invert(1);
+                }
+
+                #dashboard-grid-bottom-left-ad1-right-title {
+                    font-weight: 600;
+                    font-size: 17px;
+                }
+                #dashboard-grid-bottom-left-ad1-right-desc {
+                    font-weight: 300;
+                    font-size: 13px;
+                }
+            }
+        }
+
+        #dashboard-grid-bottom-right {
+            background-color: rgba(255, 255, 255, 0.524);
+
+            #dashboard-grid-bottom-right-title {
+                font-weight: 500;
+                font-size: 25px;
+                margin-bottom: 10px;
+
+
+            }
+
+            .domain-item {
+                padding: 15px 20px;
+                border-radius: 10px;
+                cursor: pointer;
+                width: 100%;
+                box-sizing: border-box;
+                transition: 0.3s;
+                .domain-title {
+                    transition: 0.3s;
+                    font-size: 20px;
+                }
+                .domain-bottom {
+                    color: #00000080;
+                    font-weight: 300;
+                    b {
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .domain-item:hover {
+                background-color: white;
+                .domain-title {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

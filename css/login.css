@@ -1,0 +1,80 @@
+@import url('/css/global.css');
+
+body {
+    background-color: white;
+}
+form {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    #top-div {
+        img {
+            width: 100px;
+        }
+    }
+
+    #input-div {
+        margin-top: 30px;
+        max-width: 400px;
+        width: calc(100% - 2 * 30px);
+        input {
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            margin-top: 5px;
+            padding: 15px 0px;
+            border: none;
+            text-align: center;
+            border-bottom: 2px solid #0000000a;
+            transition: 0.3s;
+
+
+        }
+
+        input:focus {
+            border: 1px solid rgb(215, 215, 215);
+            border-radius: 10px;
+        }
+    }
+
+    #button-div {
+
+        max-width: 400px;
+        width: calc(100% - 2 * 30px);
+        input, #register-button {
+            width: 100%;
+            display: block;
+            background-color: none;
+            border: none;
+            font-family: 'Urbanist', serif;
+            margin-top: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input:hover, #register-button:hover {
+            background-color: var(--themeColor);
+        }
+
+        input {
+            font-weight: 500;
+            background-color: var(--themeColorLight);
+            padding: 15px 0px;
+            border-radius: 10px;
+        }
+
+        #register-button {
+            background-color: #00000000;
+            color: #00000080;
+            font-weight: 300;
+            font-size: 15px;
+            padding: 15px 0px;
+            border-radius: 10px;
+        }
+    }
+}

@@ -1,0 +1,75 @@
+@import url('/css/global.css');
+
+#setup-grid {
+    margin-top: 50px;
+    max-width: 1000px;
+    width: calc(100% - 2 * 70px);
+    margin: 50px auto;
+
+
+    #setup-grid-top {
+        width: 100%;
+        border-radius: 10px;
+        background: linear-gradient(70deg, #47495e, #5f5e5e);
+        padding: 20px 30px;
+        color: white;
+        box-sizing: border-box;
+        #setup-grid-top-title {
+            font-size: 17px;
+            font-weight: 600;
+        }
+        #setup-grid-top-desc {
+            font-size: 13px;
+            font-weight: 300;
+        }
+        transition: 0.3s;
+    }
+    #setup-grid-top:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+
+    .setup-item {
+        width: 100%;
+        padding: 30px 30px;
+        box-sizing: border-box;
+        background-color: white;
+        margin-top: 10px;
+        border-radius: 10px;
+
+        .setup-title {
+            font-weight: 500;
+            font-size: 25px;
+        }
+
+        .setup-desc {
+            margin-top: 15px;
+            font-size: 17px;
+
+            #domains-link {
+                color: rgb(12, 12, 75);
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        
+        }
+
+        #setup-download-button {
+            padding: 10px 15px;
+            width: 180px;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            display: block;
+        }
+
+        #setup-download-button:hover {
+            opacity: 0.8;
+        }
+
+    }
+}
