@@ -107,7 +107,7 @@ $pdo = db_pdo();
             </div>
             <div id="dashboard-grid-bottom">
                 <div id="dashboard-grid-bottom-left">
-                    <div id="dashboard-grid-bottom-left-ad1" onclick="window.location.href='https://xsorexia.com'">
+                    <div id="dashboard-grid-bottom-left-ad1" onclick="window.location.href='https://xsorexia.com'" >
                         <img src="/img/xsorexia_thick@4x.png">
                         <div id="dashboard-grid-bottom-left-ad1-right">
                             <div id="dashboard-grid-bottom-left-ad1-right-title">Hi, I'm xsorexia.</div>
