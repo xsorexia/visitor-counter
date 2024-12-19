@@ -6,23 +6,23 @@ push:
     - main # Adjust this to your deployment branch
 
 jobs:
-deploy:
-    runs-on: ubuntu-latest
+    deploy:
+        runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout Repository
-    uses: actions/checkout@v3
+        steps:
+        - name: Checkout Repository
+        uses: actions/checkout@v3
 
-    - name: Deploy via SSH
-    uses: appleboy/ssh-action@v0.1.6
-    with:
-        host: ${{ secrets.LIGHTSAIL_IP }}
-        username: ${{ secrets.LIGHTSAIL_USER }}
-        key: ${{ secrets.LIGHTSAIL_PRIVATE_KEY }}
-        port: 22
-        script: |
-        cd /var/www/visitors
-        git fetch origin main
-        git stash
-        git pull origin main
-        sudo systemctl reload nginx
+        - name: Deploy via SSH
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+            host: ${{ secrets.LIGHTSAIL_IP }}
+            username: ${{ secrets.LIGHTSAIL_USER }}
+            key: ${{ secrets.LIGHTSAIL_PRIVATE_KEY }}
+            port: 22
+            script: |
+            cd /var/www/visitors
+            git fetch origin main
+            git stash
+            git pull origin main
+            sudo systemctl reload nginx
