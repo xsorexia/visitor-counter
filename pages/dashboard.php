@@ -44,6 +44,18 @@ $pdo = db_pdo();
                         </div>
                         <div class="dashboard-grid-info-left-item">
                             <div class="dashboard-grid-info-left-number"><?php
+                                $todayVisitorQuery = $pdo->prepare("SELECT COUNT(*) FROM visitors
+                                WHERE applicationID = ? AND visitDate BETWEEN NOW() - INTERVAL 1 DAY AND NOW();");
+                            $todayVisitorQuery -> execute([$userInfo['aid']]);
+                            $todayVisitor = $todayVisitorQuery -> fetchColumn();
+                            echo $todayVisitor;
+                            ?>
+
+                            </div>
+                            <div class="dashboard-grid-info-left-desc">Today's visits</div>
+                        </div>
+                        <div class="dashboard-grid-info-left-item">
+                            <div class="dashboard-grid-info-left-number"><?php
                                 $totalVisitQuery = $pdo->prepare("SELECT COUNT(*) FROM visitors
                                     WHERE applicationID = ?");
                                 $totalVisitQuery -> execute([$userInfo['aid']]);

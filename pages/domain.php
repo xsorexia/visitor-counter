@@ -170,6 +170,31 @@ if ($domainInfo == -1 or $domainInfo == 0) {
 
                 </div>
             </div>
+            <div id="dashboard-grid-users">
+                <div id="dashboard-grid-users-title">Recent visits</div>
+                <?php
+                $recentVisitQuery = $pdo->prepare("SELECT location, ipAddress, visitDate
+                FROM visitors WHERE domainID = ?
+                ORDER BY visitDate DESC
+                LIMIT 5");
+                $recentVisitQuery -> execute([$domainId]);
+                $recentVisitRes = $recentVisitQuery -> fetchAll(PDO::FETCH_ASSOC);
+                foreach ($recentVisitRes as $row) {
+                    $ip = $row['ipAddress'];
+                    $date = $row['visitDate'];
+                    $loc = $row['location'];
+                    echo "
+                <div class='visit-item'>
+                    <div class='visit-title'>$ip</div>
+                    <div class='visit-bottom'>
+                        <span><b>$date</b></span><br>
+                        <span><b>$loc</b></span>
+                    </div>
+                </div>";
+                }
+                ?>
+
+            </div>
 
         </div>
     </div>
